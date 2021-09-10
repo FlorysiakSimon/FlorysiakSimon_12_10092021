@@ -23,7 +23,7 @@
    ```sh
    npm i
    ```
-3. Run the project (port 3000 by default)
+3. Run the project (port 3001 by default)
    ```sh
    npm start
    ```
