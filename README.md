@@ -12,6 +12,8 @@
 - [react-router-dom](https://reactrouter.com/web/guides/quick-start)
 - [recharts](https://recharts.org/en-US/)
 - [styled-components](https://styled-components.com/)
+- [axios](https://axios-http.com/)
+- [prop-types](https://github.com/facebook/prop-types)
 
 ## Installation
 
