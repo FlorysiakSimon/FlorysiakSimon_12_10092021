@@ -12,7 +12,7 @@ const Head = styled.header `
 	padding: 0 87px 0 29px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     z-index:1;
-    margin-bottom:5em;
+    margin-bottom:3em;
 	img {
 		width: 178px;
 		margin-right: 150px;

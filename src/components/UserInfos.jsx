@@ -4,42 +4,67 @@ import { useState,useEffect } from 'react';
 import {getUserInfos} from '../service/data'
 import { useParams } from 'react-router';
 import caloriesIcon from '../assets/calories-icon.svg'
+import proteinsIcon from '../assets/protein-icon.svg'
+import glucidesIcon from '../assets/carbs-icon.svg'
+import lipidesIcon from '../assets/fat-icon.svg'
+import KeyData from './KeyData';
+import ScoreChart from './ScoreChart';
+import PropTypes from 'prop-types'; 
+import UserActivity from './UserActivity';
+import UserAverageSessions from './UserAverageSessions';
+import UserPerformance from './UserPerformance';
+
+const Container = styled.div`
+  
+  max-width: 1240px;
+  width: 100%;
+  margin: auto;
+`;
+
+const Head = styled.header`
+  margin-bottom: 40px;
+  
+  h1 {
+    font-weight: 600;
+    font-size:48px;
+  }
+`;
+
+const Name = styled.span`
+  color: #ff0000;
+`;
+
+const Content = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  section {
+    margin: auto;
+    margin-left:0;
+  }
+  aside {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 835px;
+    @media screen and (min-width: 1350px) {
+      flex-direction: column;
+      margin-right: 60px;
+    }
+    > div {
+      margin: 20px 5px;
+    }
+  }
+`;
+
+const BottomChart = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
 
-const Title = styled.h1`
-    font-size: 48px;
-    line-height: 24px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    margin-bottom:40px;`
-
-const UserName = styled.span`
-    color:#FF0101;`
-
-const Wrapper = styled.div`
-    display:flex;`
-
-const Infos = styled.div`
-    display:flex;
-    flex-direction:column;
-    margin-left:24px;
-`
-
-const InfosData = styled.p`
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
-    color: #282D30;
-    margin-bottom:2px;
-`
-
-const InfosText = styled.p`
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
-    color: #74798C;
-`
 
 function UserInfos() {
 
@@ -54,24 +79,35 @@ function UserInfos() {
 		};
 		getData();
 	}, [id]);
-
 	if (data.length === 0) return null;
 
-	console.log(data.keyData.caloriesCount)
+	//console.log(data)
     return (  
-    <div>
-        <Title>Bonjour <UserName>{data.userInfos.firstName}</UserName></Title>
-        <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+        <Container>
+            <Head>
+                <h1>Bonjour <Name>{data.userInfos.firstName}</Name></h1>
+                <span>Félicitation ! Vous avez explosé vos objectifs hier 👏</span>
+            </Head>
+            <Content>
+                <section>
+                    <UserActivity/>
+                    <BottomChart>
+                        <UserAverageSessions/>
+                        <UserPerformance/>
+                        <ScoreChart />
+                    </BottomChart>
+                </section>
+                <aside>
+                    <KeyData icon={caloriesIcon} info={`${data.keyData.calorieCount}kCal`} text='Calories' />
+                    <KeyData icon={proteinsIcon} info={`${data.keyData.proteinCount}g`} text='Proteines' />
+                    <KeyData icon={glucidesIcon} info={`${data.keyData.carbohydrateCount}g`} text='Glucides' />
+                    <KeyData icon={lipidesIcon} info={`${data.keyData.lipidCount}g`} text='Lipides' /> 
+                </aside>
 
-        <Wrapper>
-            <img src={caloriesIcon} alt="calories icon"/>
-            <Infos>
-                <InfosData>{data.keyData.calorieCount}Kcal</InfosData>
-                <InfosText>Calories</InfosText>
-            </Infos>
-        </Wrapper>
-        
-    </div>);
+      </Content>
+    </Container>
+    );
 }
 
 export default UserInfos;
+

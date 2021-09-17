@@ -12,6 +12,7 @@ function UserPage() {
     return (  
       <Main>
           <UserInfos />
+         
       </Main>);
 }
 
