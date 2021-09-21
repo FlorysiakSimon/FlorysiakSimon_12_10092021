@@ -17,21 +17,22 @@
 
 ## Installation
 
-1. Clone this repository
-   ```sh
-   git clone https://github.com/FlorysiakSimon/FlorysiakSimon_12_10092021.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm i
-   ```
-3. Run the project (port 3001 by default)
-   ```sh
-   npm start
-   ```
-4. Getting the backend
+1. Get the backend
 
 - This project uses an API available [here](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
 - There are 2 users available, their URL are
   - `http://localhost:3000/user/12`
   - `http://localhost:3000/user/18`
+
+2. Clone this repository
+   ```sh
+   git clone https://github.com/FlorysiakSimon/FlorysiakSimon_12_10092021.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm i
+   ```
+4. Run the project (port 3001 by default)
+   ```sh
+   npm start
+   ```
