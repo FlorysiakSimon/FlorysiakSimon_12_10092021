@@ -2,7 +2,7 @@ import React, {useState,useEffect} from 'react';
 import styled from 'styled-components';
 import { getUserPerformance } from '../service/data';
 import { useParams } from 'react-router';
-import {Radar,RadarChart,PolarGrid,PolarAngleAxis,PolarRadiusAxis,ResponsiveContainer} from "recharts";
+import {Radar,RadarChart,PolarGrid,PolarAngleAxis,ResponsiveContainer} from "recharts";
 
 const Container = styled.div`
     position: relative;
@@ -49,7 +49,7 @@ function UserPerformance() {
 	}, [id]);
 	if (data.length === 0) return null;
 	
-	console.log(data)
+	//console.log(data)
 
     return ( 
     <Container>

@@ -26,7 +26,12 @@ const InfosText = styled.p`
     line-height: 24px;
     color: #74798C;
 `
-
+/**
+ * @param  {string} icon
+ * @param  {string} info
+ * @param  {string} text
+ * render icon with userinfos 
+ */
 function KeyData({icon,info,text}) {
     return (  
     <Wrapper>
@@ -41,8 +46,9 @@ function KeyData({icon,info,text}) {
 export default KeyData;
 
 KeyData.propTypes = {
-    src: PropTypes.string,
-    info: PropTypes.string,
-    text: PropTypes.string,
-    type: PropTypes.string,
-};
+  icon: PropTypes.any,
+  info: PropTypes.string,
+  src: PropTypes.string,
+  text: PropTypes.string,
+  type: PropTypes.string
+}

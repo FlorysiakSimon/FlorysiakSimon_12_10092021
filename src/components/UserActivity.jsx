@@ -14,8 +14,7 @@ const Wrapper = styled.div`
 	background-color: #fbfbfb;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
 	padding: 25px;
-	width:835px;
-	height:320px;
+	
 `
 const Head = styled.div`
     display: flex;
@@ -72,7 +71,7 @@ function UserActivity() {
 	}, [id]);
 	if (data.length === 0) return null;
 
-	//console.log(data)
+	console.log(data)
     return (  
         <Wrapper>
             <Head>
@@ -106,5 +105,5 @@ function UserActivity() {
 export default UserActivity;
 
 UserActivity.propTypes = {
-    id: PropTypes.number,
+  id: PropTypes.number
 }

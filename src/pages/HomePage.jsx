@@ -6,6 +6,7 @@ const Main = styled.main`
   max-width: 1240px;
   margin: auto;
   a{
+      margin-top:1em;
       display:flex;
       flex-direction:column;
   }
@@ -15,6 +16,7 @@ const Main = styled.main`
 function HomePage() {
     return ( 
         <Main>
+        
             <NavLink to="user/12">USER 12</NavLink>
             <NavLink to="user/18">USER 18</NavLink>
         </Main>

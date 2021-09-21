@@ -6,12 +6,10 @@ import iconBell from '../assets/iconBell.svg'
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-const Nav = styled.nav `
-    position: absolute;
+const Nav = styled.div `
+    
     width : 117px;
-    height: 100%;
-    left: 0px;
-    top: 0px;
+    height: 100vh;
     background: #020203;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	

@@ -4,7 +4,6 @@ import { getUserAverageSessions } from '../service/data';
 import { useParams } from 'react-router';
 import {ResponsiveContainer,LineChart,Line,XAxis,YAxis,Tooltip} from "recharts";
 import SessionsToolType from './SessionsToolType.jsx';
-import PropTypes from 'prop-types'; 
 
 const Container = styled.div`
     position: relative;

@@ -9,16 +9,15 @@ import glucidesIcon from '../assets/carbs-icon.svg'
 import lipidesIcon from '../assets/fat-icon.svg'
 import KeyData from './KeyData';
 import ScoreChart from './ScoreChart';
-import PropTypes from 'prop-types'; 
 import UserActivity from './UserActivity';
 import UserAverageSessions from './UserAverageSessions';
 import UserPerformance from './UserPerformance';
 
 const Container = styled.div`
-  
   max-width: 1240px;
   width: 100%;
   margin: auto;
+  margin-top:2%;
 `;
 
 const Head = styled.header`
@@ -27,6 +26,7 @@ const Head = styled.header`
   h1 {
     font-weight: 600;
     font-size:48px;
+    margin-bottom:40px;
   }
 `;
 
@@ -40,19 +40,15 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  section {
-    margin: auto;
-    margin-left:0;
-  }
+  
   aside {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 835px;
-    @media screen and (min-width: 1350px) {
-      flex-direction: column;
-      margin-right: 60px;
-    }
+    flex-direction: column;
+    margin: auto;
+    margin-left:0;
     > div {
       margin: 20px 5px;
     }
@@ -60,7 +56,9 @@ const Content = styled.div`
 `;
 
 const BottomChart = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap:1em;
   justify-content: space-between;
 `;
 
@@ -69,19 +67,21 @@ const BottomChart = styled.div`
 function UserInfos() {
 
     const [data, setData] = useState([]);
-	const {id} = useParams();
+	  const {id} = useParams();
 
     useEffect(() => {
 		const getData = async () => {
 			const request = await getUserInfos(id);
 			if (!request) return console.log('data error');
 			setData(request.data);
+      
 		};
 		getData();
 	}, [id]);
 	if (data.length === 0) return null;
 
 	//console.log(data)
+
     return (  
         <Container>
             <Head>
@@ -94,7 +94,7 @@ function UserInfos() {
                     <BottomChart>
                         <UserAverageSessions/>
                         <UserPerformance/>
-                        <ScoreChart />
+                        <ScoreChart data={data}/>
                     </BottomChart>
                 </section>
                 <aside>
