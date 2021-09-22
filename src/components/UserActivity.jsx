@@ -8,13 +8,16 @@ import {BarChart,Bar,XAxis,YAxis,CartesianGrid,Tooltip, ResponsiveContainer} fro
 import ActivityToolType from './ActivityToolType';
 
 const Wrapper = styled.div`
-    margin-bottom: 25px;
+    margin-bottom: 3em;
 	height: 320px;
 	border-radius: 5px;
 	background-color: #fbfbfb;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
 	padding: 25px;
 	
+	@media (max-width: 1025px) {
+      padding-left:0;
+    }
 `
 const Head = styled.div`
     display: flex;

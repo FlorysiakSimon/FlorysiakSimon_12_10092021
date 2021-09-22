@@ -6,12 +6,26 @@ import iconBell from '../assets/iconBell.svg'
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
+const Container = styled.div `
+ overflow: hidden;
+ position:relative;
+`
+
 const Nav = styled.div `
-    
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
     width : 117px;
     height: 100vh;
     background: #020203;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /*margin-bottom: -5000px; 
+    padding-bottom: 5000px; */
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+
 	
 `
 const Wrapper = styled.div`
@@ -47,15 +61,18 @@ const NavText = styled.p `
 
 function LeftBar() {
     return ( 
-        <Nav>
-            <Wrapper>
-                <NavLink to='#'><img src={iconMedation} alt="icone meditation" /></NavLink>
-                <NavLink to='#'><img src={iconSwim} alt="icone nage" /></NavLink>
-                <NavLink to='#'><img src={iconBike} alt="icone vélo" /></NavLink>
-                <NavLink to='#'><img src={iconBell} alt="icone musculation" /></NavLink>
-            </Wrapper>
-            <NavText>Copiryght, SportSee 2020</NavText>
-        </Nav>
+
+        <Container>
+            <Nav>
+                <Wrapper>
+                    <NavLink to='#'><img src={iconMedation} alt="icone meditation" /></NavLink>
+                    <NavLink to='#'><img src={iconSwim} alt="icone nage" /></NavLink>
+                    <NavLink to='#'><img src={iconBike} alt="icone vélo" /></NavLink>
+                    <NavLink to='#'><img src={iconBell} alt="icone musculation" /></NavLink>
+                </Wrapper>
+                <NavText>Copiryght, SportSee 2020</NavText>
+            </Nav>
+        </Container>
      );
 }
 

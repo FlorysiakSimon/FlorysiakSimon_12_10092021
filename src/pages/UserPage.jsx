@@ -7,7 +7,7 @@ const Main = styled.main`
   display:grid;
   grid-template-columns: 117px auto;
   margin: auto;
-  height: 100vh;
+  /*height: 100vh; */
   @media screen and (max-width: 1250px) {
       grid-gap:1em;
     }

@@ -18,11 +18,14 @@ const Container = styled.div`
   width: 100%;
   margin: auto;
   margin-top:2%;
+  
 `;
 
 const Head = styled.header`
   margin-bottom: 40px;
-  
+  @media (max-width: 1025px) {
+			margin-left: 2em;
+		}
   h1 {
     font-weight: 600;
     font-size:48px;
@@ -49,6 +52,11 @@ const Content = styled.div`
     flex-direction: column;
     margin: auto;
     margin-left:0;
+    @media (max-width: 1025px) {
+      flex-direction: row;
+      margin: auto 0;
+      margin-right:6em;
+    }
     > div {
       margin: 20px 5px;
     }

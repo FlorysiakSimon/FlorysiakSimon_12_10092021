@@ -11,41 +11,43 @@ const Container = styled.div`
 
 const Title = styled.h2`
     position:absolute;
+    left: 20%;
+    top: 15%;
+    transform: translate(-50%, -50%);
     font-weight: 500;
     font-size: 15px;
     line-height: 24px;
     color: #20253A;
-	font-weight: 700;
-    left: 20%;
-	top: 15%;
-    transform: translate(-50%, -50%);
+    font-weight: 700;
 `
 
 const Text = styled.p`
     position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     font-size: 15px;
     line-height: 26px;
     font-weight: 700;
     text-align: center;
     color: #74798C;
-    
-
 `
+
 const Score = styled.span`
     color: rgba(0, 0, 0, 0.8);
-	font-weight: 700;
-	font-size: 26px;
-
+    font-weight: 700;
+    font-size: 26px;
 `
-
+/**
+ * @param  {object} {data}
+ * @param  {array} {score}
+ * return PieChart with score value
+ */
 function ScoreChart({data}) {
     
     const score = [
-        { value: data.todayScore || data.score, color: '#ff0000' },
-        { value: 1 - data.todayScore || data.score, color: '#ffffff' }, 
+        { value: data.todayScore || data.score},
+        { value: 1 - data.todayScore || data.score }, 
     ];
     
     return ( 

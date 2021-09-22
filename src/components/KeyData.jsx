@@ -4,7 +4,18 @@ import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
     display:flex;
-    padding:2em;`
+    padding:2em;
+    @media (max-width: 1025px) {
+        padding:1em
+        
+    }
+    &:first-child {
+        @media (max-width: 1025px) {
+            
+        }
+    }
+`
+    
 
 const Infos = styled.div`
     display:flex;
