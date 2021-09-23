@@ -18,6 +18,12 @@ line-height: 24px;
 margin-top:7px;
 `
 
+/** create a custom tooltype for the user activity barChart
+ * @param  {bool} active
+ * @param  {array} payload
+ * @return {JSX}
+ */
+
 function CustomToolType({active, payload}) {
     if (active){
     return (

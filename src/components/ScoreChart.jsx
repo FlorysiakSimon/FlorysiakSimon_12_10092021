@@ -38,10 +38,9 @@ const Score = styled.span`
     font-weight: 700;
     font-size: 26px;
 `
-/**
+/** create a PieChart with score value
  * @param  {object} {data}
- * @param  {array} {score}
- * return PieChart with score value
+ * @return {JSX}  
  */
 function ScoreChart({data}) {
     

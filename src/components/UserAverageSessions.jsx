@@ -28,7 +28,7 @@ position: absolute;
 
 /**
  * Render a LineChart with user average sessions Data
- * @param {data} the fetched data from API
+ * @return {JSX}
  */
 
 function UserAverageSessions() {
@@ -40,23 +40,42 @@ function UserAverageSessions() {
 		const getData = async () => {
 			const request = await getUserAverageSessions(id);
 			if (!request) return console.log('data error');
-			
-			setData(request.data.sessions);
+			const formatData = request.data.sessions.map((data) => {
+				switch (data.day) {
+					case 1:
+						return { ...data, day: 'L' };
+					case 2:
+						return { ...data, day: 'M' };
+					case 3:
+						return { ...data, day: 'M' };
+					case 4:
+						return { ...data, day: 'J' };
+					case 5:
+						return { ...data, day: 'V' };
+					case 6:
+						return { ...data, day: 'S' };
+					case 7:
+						return { ...data, day: 'D' };
+					default:
+						return {...data };
+				}
+			});
+			setData(formatData);
 		};
 		getData();
 	}, [id]);
 	if (data.length === 0) return null;
-
-  //  console.log(data)
+	
+    console.log(data)
     return (
         <Container>
             <Title>Durée moyenne des sessions</Title>
             <ResponsiveContainer width='100%' height='100%'>
             <LineChart data={data} >
-                <XAxis dataKey="day" tickLine={false} tick={{fontSize: 14, stroke:'#FFFFFF'}} />
+                <XAxis dataKey="day" tickLine={false} tick={{fontSize: 14, stroke:'rgba(255, 255, 255, 0.7)'}} />
                 <YAxis dataKey="sessionLength" domain={[0, 'dataMax + 30']} hide={true}/>
                 <Tooltip content={<SessionsToolType/>}/>
-                <Line type="monotone" dataKey="sessionLength" stroke="rgba(255, 255, 255, 0.7)" strokeWidth={2} dot={false} activeDot={{ r: 5 }}/>
+                <Line type="monotone" dataKey="sessionLength" stroke="rgba(255, 255, 255, 0.7)" strokeWidth={2} dot={false} activeDot={{ r: 4, strokeWidth: 4, stroke:'white' }}/>
             </LineChart>
             </ResponsiveContainer>
         </Container>

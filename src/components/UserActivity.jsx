@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { useState,useEffect } from 'react';
 import {getUserActivity} from '../service/data'
 import { useParams } from 'react-router';
-import PropTypes from 'prop-types'; 
 import {BarChart,Bar,XAxis,YAxis,CartesianGrid,Tooltip, ResponsiveContainer} from "recharts";
 import ActivityToolType from './ActivityToolType';
 
@@ -56,7 +55,7 @@ const Info = styled.div`
 `
 /**
  * Render a BarChart with user activity Data
- * @param {data} the fetched data from API
+ * @return {JSX}
  */
 function UserActivity() {
 
@@ -74,7 +73,7 @@ function UserActivity() {
 	}, [id]);
 	if (data.length === 0) return null;
 
-	console.log(data)
+	//console.log(data)
     return (  
         <Wrapper>
             <Head>
@@ -107,6 +106,3 @@ function UserActivity() {
 
 export default UserActivity;
 
-UserActivity.propTypes = {
-  id: PropTypes.number
-}

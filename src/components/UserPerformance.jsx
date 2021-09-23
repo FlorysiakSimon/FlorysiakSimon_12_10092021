@@ -17,6 +17,7 @@ const Container = styled.div`
  * Render a RadarChart with user performance data
  * @param {data} the fetched data from API
  */
+
 function UserPerformance() {
     const [data, setData] = useState([]);
 	const {id} = useParams();
@@ -24,7 +25,7 @@ function UserPerformance() {
     useEffect(() => {
 		const getData = async () => {
 			const request = await getUserPerformance(id);
-			
+			if (!request) return console.log('data error');
 			const formatData = request.data.data.map((data) => {
 				switch (data.kind) {
 					case 1:

@@ -52,7 +52,7 @@ const Content = styled.div`
     flex-direction: column;
     margin: auto;
     margin-left:0;
-    @media (max-width: 1025px) {
+    @media (max-width: 1208px) {
       flex-direction: row;
       margin: auto 0;
       margin-right:6em;
@@ -82,7 +82,6 @@ function UserInfos() {
 			const request = await getUserInfos(id);
 			if (!request) return console.log('data error');
 			setData(request.data);
-      
 		};
 		getData();
 	}, [id]);
@@ -111,7 +110,6 @@ function UserInfos() {
                     <KeyData icon={glucidesIcon} info={`${data.keyData.carbohydrateCount}g`} text='Glucides' />
                     <KeyData icon={lipidesIcon} info={`${data.keyData.lipidCount}g`} text='Lipides' /> 
                 </aside>
-
       </Content>
     </Container>
     );

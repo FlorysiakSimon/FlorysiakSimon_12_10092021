@@ -37,11 +37,11 @@ const InfosText = styled.p`
     line-height: 24px;
     color: #74798C;
 `
-/**
+/** render icon with userinfos 
  * @param  {string} icon
  * @param  {string} info
  * @param  {string} text
- * render icon with userinfos 
+ * @return {JSX}
  */
 function KeyData({icon,info,text}) {
     return (  

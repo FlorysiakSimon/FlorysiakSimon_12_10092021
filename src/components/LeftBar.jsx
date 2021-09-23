@@ -7,8 +7,8 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const Container = styled.div `
- overflow: hidden;
- position:relative;
+    overflow: hidden;
+    position:relative;
 `
 
 const Nav = styled.div `

@@ -17,8 +17,7 @@ function UserPage() {
     return (  
       <Main>
         <LeftBar />
-        <UserInfos />
-         
+        <UserInfos />   
       </Main>);
 }
 
