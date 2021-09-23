@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-- [NodeJS](https://nodejs.org/en/)
+- [NodeJS (version 14.17)](https://nodejs.org/en/)
 
 ## Dependencies
 
@@ -14,6 +14,7 @@
 - [styled-components](https://styled-components.com/)
 - [axios](https://axios-http.com/)
 - [prop-types](https://github.com/facebook/prop-types)
+- Recommended text editor: [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Installation
 
