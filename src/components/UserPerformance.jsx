@@ -25,7 +25,7 @@ function UserPerformance() {
     useEffect(() => {
 		const getData = async () => {
 			const request = await getUserPerformance(id);
-			if (!request) return console.log('data error');
+			if (!request) return alert('data error');
 			const formatData = request.data.data.map((data) => {
 				switch (data.kind) {
 					case 1:

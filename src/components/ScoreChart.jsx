@@ -63,14 +63,12 @@ function ScoreChart({data}) {
                 </Pie>
                 </PieChart>
             </ResponsiveContainer>
-            
-             <Text>
+            <Text>
                 <Score>{score[0].value * 100 }%<br/></Score>
                 de votre<br/> objectif
             </Text>
         </Container>
      );
-     
 }
 
 export default ScoreChart;

@@ -58,7 +58,9 @@ const NavText = styled.p `
     color:white;
     margin:auto;
 `
-
+/** create sideBar with navlink
+ * @return {JSX}
+ */
 function LeftBar() {
     return ( 
 

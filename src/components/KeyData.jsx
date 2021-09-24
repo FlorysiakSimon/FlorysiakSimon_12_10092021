@@ -7,16 +7,9 @@ const Wrapper = styled.div`
     padding:2em;
     @media (max-width: 1025px) {
         padding:1em
-        
-    }
-    &:first-child {
-        @media (max-width: 1025px) {
-            
-        }
     }
 `
     
-
 const Infos = styled.div`
     display:flex;
     flex-direction:column;
@@ -37,7 +30,7 @@ const InfosText = styled.p`
     line-height: 24px;
     color: #74798C;
 `
-/** render icon with userinfos 
+/** display icon with user infos 
  * @param  {string} icon
  * @param  {string} info
  * @param  {string} text
@@ -59,7 +52,5 @@ export default KeyData;
 KeyData.propTypes = {
   icon: PropTypes.any,
   info: PropTypes.string,
-  src: PropTypes.string,
   text: PropTypes.string,
-  type: PropTypes.string
 }
