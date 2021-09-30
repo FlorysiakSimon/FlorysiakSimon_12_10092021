@@ -72,10 +72,9 @@ function UserActivity() {
 		getData();
 	}, [id]);
 	if (data.length === 0) return null;
-
-	for (let i = 0 ; i < data.length ; i ++) { data[i].day = i + 1 ; console.log(i)}
 	
-	console.log(data)
+	for (let i = 0 ; i < data.length ; i ++){data[i].day = i + 1;}
+	//console.log(data)
     return (  
         <Wrapper>
             <Head>
@@ -96,7 +95,7 @@ function UserActivity() {
                     <CartesianGrid vertical={false} strokeDasharray="1 1" />
                     <XAxis dataKey="day" tickLine={false} tick={{fontSize: 14, stroke:'#9B9EAC'}} dy={15} />
                     <YAxis yAxisId="kilogram" dataKey="kilogram" type="number" domain={['dataMin - 2', 'dataMax + 1']} tickCount="3" axisLine={false} orientation="right" tickLine={false} tick={{fontSize: 14, stroke:'#9B9EAC'}} dx={15}/>
-                    <YAxis yAxisId="calories" dataKey="calories" type="number" domain={['dataMin - 20', 'dataMax + 5']}  hide={true}/>
+                    <YAxis yAxisId="calories" dataKey="calories" type="number" domain={['dataMin - 20', 'dataMax + 10']}  hide={true}/>
                     <Tooltip content={<ActivityToolType/>}/>
                     <Bar yAxisId="kilogram" dataKey="kilogram" fill="#282D30" barSize={7} radius={[50, 50, 0, 0]}/>
                     <Bar yAxisId="calories" dataKey="calories" fill="#E60000" barSize={7} radius={[50, 50, 0, 0]}/>

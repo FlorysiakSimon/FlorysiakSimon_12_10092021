@@ -15,7 +15,7 @@ const Container = styled.div`
 `
 /**
  * Render a RadarChart with user performance data
- * @param {data} the fetched data from API
+ * @return {JSX}
  */
 
 function UserPerformance() {
@@ -57,8 +57,7 @@ function UserPerformance() {
             <ResponsiveContainer width="100%" height="100%">
 				<RadarChart cx='50%' cy='50%' outerRadius='65%' data={data}>
 						<PolarGrid gridType="polygon" />
-						
-						<PolarAngleAxis domain={['dataMin', 'dataMax +10 ']}	dataKey="kind" stroke='white' tickLine={false} axisLine={false}  tick={{ fontSize: 10 }}/>
+						<PolarAngleAxis	dataKey="kind" stroke='white' tickLine={false} axisLine={false}  tick={{ fontSize: 10 }}/>
 						<Radar dataKey='value' stroke='#FF0101'	fill='#FF0101' fillOpacity={0.7} />
 				</RadarChart>
             </ResponsiveContainer>
