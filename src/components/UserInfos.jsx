@@ -24,6 +24,7 @@ const Name = styled.span`
 */
 
 function UserInfos({name}) {
+
     return (  
           <Head>
             <h1>Bonjour <Name>{name}</Name></h1>

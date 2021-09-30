@@ -15,6 +15,7 @@ import UserPerformance from '../components/UserPerformance';
 import LeftBar from '../components/LeftBar';
 import UserInfos from '../components/UserInfos';
 
+
 const Main = styled.main`
   display:grid;
   grid-template-columns: 117px auto;
@@ -63,11 +64,12 @@ const BottomChart = styled.div`
   justify-content: space-between;
 `;
 
-
+/**Render the dashboard
+* @return {JSX}
+*/
 function UserPage() {
   const [data, setData] = useState([]);
 	const {id} = useParams();
-
   useEffect(() => {
 		const getData = async () => {
 			const request = await getUserInfos(id);
@@ -77,8 +79,6 @@ function UserPage() {
 		getData();
 	}, [id]);
 	if (data.length === 0) return null;
-
-  //console.log(data)
 
     return (  
       <Main>

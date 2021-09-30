@@ -6,9 +6,9 @@ import axios from 'axios';
  * @param {string} id User id
  * @returns {object} Response
  */
-export const getUserInfos = async (id) => {
+ export const mockUserInfos = async (id) => {
 	try {
-		const res = await axios.get(`http://localhost:3000/user/${id}`);
+		const res = await axios.get(`../../${id}/info.json`);
 		return res.data;
 	} catch (e) {
 		console.log(e);
@@ -22,9 +22,9 @@ export const getUserInfos = async (id) => {
  * @param {string} id User id
  * @returns {object} Response
  */
-export const getUserActivity = async (id) => {
+export const mockUserActivity = async (id) => {
 	try {
-		const res = await axios.get(`http://localhost:3000/user/${id}/activity`);
+		const res = await axios.get(`../../${id}/activity.json`);
 		return res.data;
 	} catch (e) {
 		console.log(e);
@@ -37,9 +37,9 @@ export const getUserActivity = async (id) => {
  * @param {string} id User id
  * @returns {object} Response
  */
-export const getUserAverageSessions = async (id) => {
+export const mockUserAverageSessions = async (id) => {
 	try {
-		const res = await axios.get(`http://localhost:3000/user/${id}/average-sessions`);
+		const res = await axios.get(`../../${id}/averagesessions`);
 		return res.data;
 	} catch (e) {
 		console.log(e);
@@ -52,9 +52,9 @@ export const getUserAverageSessions = async (id) => {
  * @param {string} id User id
  * @returns {object} Response
  */
-export const getUserPerformance = async (id) => {
+export const mockUserPerformance = async (id) => {
 	try {
-		const res = await axios.get(`http://localhost:3000/user/${id}/performance`);
+		const res = await axios.get(`../../${id}/performance`);
 		return res.data;
 	} catch (e) {
 		console.log(e);
