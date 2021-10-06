@@ -39,7 +39,7 @@ export const mockUserActivity = async (id) => {
  */
 export const mockUserAverageSessions = async (id) => {
 	try {
-		const res = await axios.get(`../../${id}/averagesessions`);
+		const res = await axios.get(`../../${id}/averagesessions.json`);
 		return res.data;
 	} catch (e) {
 		console.log(e);
@@ -54,7 +54,7 @@ export const mockUserAverageSessions = async (id) => {
  */
 export const mockUserPerformance = async (id) => {
 	try {
-		const res = await axios.get(`../../${id}/performance`);
+		const res = await axios.get(`../../${id}/performance.json`);
 		return res.data;
 	} catch (e) {
 		console.log(e);

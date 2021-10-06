@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Wrapper = styled.div`
     display:flex;
     padding:2em;
-    @media (max-width: 1025px) {
+    @media (max-width: 1208px) {
         padding:1em
     }
 `
@@ -48,7 +48,6 @@ function KeyData({icon,info,text}) {
 }
 
 export default KeyData;
-
 KeyData.propTypes = {
   icon: PropTypes.any,
   info: PropTypes.string,

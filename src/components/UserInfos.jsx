@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Head = styled.header`
   margin-bottom: 40px;
-  @media (max-width: 1025px) {
+  @media (max-width: 1203px) {
 			margin-left: 2em;
 		}
   h1 {

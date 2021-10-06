@@ -66,7 +66,7 @@ function UserAverageSessions() {
 	}, [id]);
 	if (data.length === 0) return null;
 	
-   // console.log(data)
+    // console.log(data)
     return (
         <Container>
             <Title>Durée moyenne des sessions</Title>
