@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useState,useEffect } from 'react';
-//import {getUserInfos} from '../service/data'
+import {getUserInfos} from '../service/data'
 import { useParams } from 'react-router';
 import caloriesIcon from '../assets/calories-icon.svg'
 import proteinsIcon from '../assets/protein-icon.svg'
@@ -14,7 +14,6 @@ import UserAverageSessions from '../components/UserAverageSessions';
 import UserPerformance from '../components/UserPerformance';
 import LeftBar from '../components/LeftBar';
 import UserInfos from '../components/UserInfos';
-import { mockUserInfos } from './../service/mockedData';
 
 
 const Main = styled.main`
@@ -73,7 +72,7 @@ function UserPage() {
 	const {id} = useParams();
   useEffect(() => {
 		const getData = async () => {
-			const request = await mockUserInfos(id);
+			const request = await getUserInfos(id);
 			if (!request) return alert('data error');
 			setData(request.data);
 		};
