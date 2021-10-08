@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useState,useEffect } from 'react';
-import {getUserActivity} from '../service/data'
+//import {getUserActivity} from '../service/data'
 import { useParams } from 'react-router';
 import {BarChart,Bar,XAxis,YAxis,CartesianGrid,Tooltip, ResponsiveContainer} from "recharts";
 import ActivityToolType from './ActivityToolType';
+import { mockUserActivity } from '../service/mockedData';
 
 const Wrapper = styled.div`
     margin-bottom: 3em;
@@ -64,7 +65,7 @@ function UserActivity() {
 
     useEffect(() => {
 		const getData = async () => {
-			const request = await getUserActivity(id);
+			const request = await mockUserActivity(id);
 			if (!request) return alert('data error');
 			
 			setData(request.data.sessions);

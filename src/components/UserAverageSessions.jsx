@@ -1,9 +1,10 @@
 import React, {useState,useEffect} from 'react';
 import styled from 'styled-components';
-import { getUserAverageSessions } from '../service/data';
+//import { getUserAverageSessions } from '../service/data';
 import { useParams } from 'react-router';
 import {ResponsiveContainer,LineChart,Line,XAxis,YAxis,Tooltip} from "recharts";
 import SessionsToolType from './SessionsToolType.jsx';
+import { mockUserAverageSessions } from './../service/mockedData';
 
 const Container = styled.div`
     position: relative;
@@ -38,7 +39,7 @@ function UserAverageSessions() {
 
     useEffect(() => {
 		const getData = async () => {
-			const request = await getUserAverageSessions(id);
+			const request = await mockUserAverageSessions(id);
 			if (!request) return alert('data error');
 			const formatData = request.data.sessions.map((data) => {
 				switch (data.day) {

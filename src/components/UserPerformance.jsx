@@ -1,8 +1,9 @@
 import React, {useState,useEffect} from 'react';
 import styled from 'styled-components';
-import { getUserPerformance } from '../service/data';
+//import { getUserPerformance } from '../service/data';
 import { useParams } from 'react-router';
 import {Radar,RadarChart,PolarGrid,PolarAngleAxis,ResponsiveContainer} from "recharts";
+import { mockUserPerformance } from '../service/mockedData';
 
 const Container = styled.div`
     position: relative;
@@ -24,7 +25,7 @@ function UserPerformance() {
 
     useEffect(() => {
 		const getData = async () => {
-			const request = await getUserPerformance(id);
+			const request = await mockUserPerformance(id);
 			if (!request) return alert('data error');
 			const formatData = request.data.data.map((data) => {
 				switch (data.kind) {
