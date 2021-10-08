@@ -8,7 +8,7 @@ import axios from 'axios';
  */
  export const mockUserInfos = async (id) => {
 	try {
-		const res = await axios.get(`../../${id}/info.json`);
+		const res = await axios.get(`./${id}/info.json`);
 		return res.data;
 	} catch (e) {
 		console.log(e);
@@ -24,7 +24,7 @@ import axios from 'axios';
  */
 export const mockUserActivity = async (id) => {
 	try {
-		const res = await axios.get(`../../${id}/activity.json`);
+		const res = await axios.get(`./${id}/activity.json`);
 		return res.data;
 	} catch (e) {
 		console.log(e);
@@ -39,7 +39,7 @@ export const mockUserActivity = async (id) => {
  */
 export const mockUserAverageSessions = async (id) => {
 	try {
-		const res = await axios.get(`../../${id}/averagesessions.json`);
+		const res = await axios.get(`./${id}/averagesessions.json`);
 		return res.data;
 	} catch (e) {
 		console.log(e);
@@ -54,7 +54,7 @@ export const mockUserAverageSessions = async (id) => {
  */
 export const mockUserPerformance = async (id) => {
 	try {
-		const res = await axios.get(`../../${id}/performance.json`);
+		const res = await axios.get(`./${id}/performance.json`);
 		return res.data;
 	} catch (e) {
 		console.log(e);
