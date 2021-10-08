@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/SportSee/static/css/main.51f75502.chunk.css",
-    "main.js": "/SportSee/static/js/main.db03c7d7.chunk.js",
-    "main.js.map": "/SportSee/static/js/main.db03c7d7.chunk.js.map",
+    "main.js": "/SportSee/static/js/main.46ccfde9.chunk.js",
+    "main.js.map": "/SportSee/static/js/main.46ccfde9.chunk.js.map",
     "runtime-main.js": "/SportSee/static/js/runtime-main.52e358d5.js",
     "runtime-main.js.map": "/SportSee/static/js/runtime-main.52e358d5.js.map",
-    "static/js/2.c17b50aa.chunk.js": "/SportSee/static/js/2.c17b50aa.chunk.js",
-    "static/js/2.c17b50aa.chunk.js.map": "/SportSee/static/js/2.c17b50aa.chunk.js.map",
+    "static/js/2.0751c01b.chunk.js": "/SportSee/static/js/2.0751c01b.chunk.js",
+    "static/js/2.0751c01b.chunk.js.map": "/SportSee/static/js/2.0751c01b.chunk.js.map",
     "static/js/3.0bfc3c12.chunk.js": "/SportSee/static/js/3.0bfc3c12.chunk.js",
     "static/js/3.0bfc3c12.chunk.js.map": "/SportSee/static/js/3.0bfc3c12.chunk.js.map",
     "index.html": "/SportSee/index.html",
     "static/css/main.51f75502.chunk.css.map": "/SportSee/static/css/main.51f75502.chunk.css.map",
-    "static/js/2.c17b50aa.chunk.js.LICENSE.txt": "/SportSee/static/js/2.c17b50aa.chunk.js.LICENSE.txt",
+    "static/js/2.0751c01b.chunk.js.LICENSE.txt": "/SportSee/static/js/2.0751c01b.chunk.js.LICENSE.txt",
     "static/media/calories-icon.5db5a3af.svg": "/SportSee/static/media/calories-icon.5db5a3af.svg",
     "static/media/carbs-icon.aa0e7466.svg": "/SportSee/static/media/carbs-icon.aa0e7466.svg",
     "static/media/fat-icon.82c6cb9f.svg": "/SportSee/static/media/fat-icon.82c6cb9f.svg",
@@ -24,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.52e358d5.js",
-    "static/js/2.c17b50aa.chunk.js",
+    "static/js/2.0751c01b.chunk.js",
     "static/css/main.51f75502.chunk.css",
-    "static/js/main.db03c7d7.chunk.js"
+    "static/js/main.46ccfde9.chunk.js"
   ]
 }
